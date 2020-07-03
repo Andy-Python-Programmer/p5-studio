@@ -45,14 +45,11 @@ function config() {
         }
     ])
     .then(answers => {
-        config.name = answers.name;
-
         switch(answers.type) {
             case "static":
-                config = staticConf(config, answers.name, process.cwd());
+                staticConf(config, answers.name, process.cwd());
                 break;
         }
-        // console.log(config);
     })
 }
 
