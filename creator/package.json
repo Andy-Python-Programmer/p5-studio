@@ -1,6 +1,6 @@
 {
   "name": "p5-studio-creator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A CLI tool to create p5.js project.",
   "main": "src/index.js",
   "bin": "src/index.js",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Andy-Python-Programmer/p5-studio#readme",
   "dependencies": {
-    "caporal": "^1.4.0",
+    "express": "^4.17.1",
     "inquirer": "^7.3.0"
   }
 }
