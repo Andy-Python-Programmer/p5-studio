@@ -48,10 +48,10 @@ function config() {
 
         switch(answers.type) {
             case "static":
-                config = staticConf(config, answers.name);
+                config = staticConf(config, answers.name, process.cwd());
                 break;
         }
-        console.log(config);
+        // console.log(config);
     })
 }
 
