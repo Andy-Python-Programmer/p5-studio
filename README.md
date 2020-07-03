@@ -10,5 +10,9 @@ P5 Studio is a repository that contains all the tools that you need to start mak
 3. Go to your project directory
 4. Then run ```p5-studio-creator```
 
+#### Features
+1. Creates project for you.
+2. Open live server for you.
+
 ### Info
 Currently all of the projects in this repository are in developement. You can try them. All the features will be realesed in a stabel version and if you want to contribute just go ahead and start contributing.
