@@ -5,11 +5,12 @@
 var inquirer = require('inquirer');
 var fs = require("fs");
 var path = require("path");
-const readline = require('readline')
+const readline = require('readline');
 
 // Custom Requires
 
 const staticConf = require("./configs/staticConf.js");
+const server = require("./server/server.js");
 
 const existindex = fs.existsSync("index.html");
 
@@ -61,13 +62,13 @@ if (existindex) {
             {
                 type: "confirm",
                 name: "overwrite",
-                message: "index.html already exists! Would you like to overwrite it ?",
+                message: "index.html already exists! Would you like to open live server here ?",
                 default: false,
             }
         ])
         .then(answers => {
             if (answers.overwrite) {
-                config();
+                server(process.cwd())
             } else{
                 console.log("Goodbye :)")
             }
