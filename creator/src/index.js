@@ -2,9 +2,9 @@
 
 // Requires
 
-var inquirer = require('inquirer');
-var fs = require("fs");
-var path = require("path");
+const inquirer = require('inquirer');
+const fs = require("fs");
+const path = require("path");
 const readline = require('readline');
 
 // Custom Requires
