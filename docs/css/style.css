@@ -1,0 +1,54 @@
+body{
+    overflow-x: hidden;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.navbar-light{
+    background-color: white !important;
+}
+
+.navbar-brand{
+    font-weight: 100;
+}
+
+.roundness{
+    height: 200px;
+    font-weight: 100;
+}
+
+.blackness{
+    border: 20px solid black;
+}
+
+.bigger{
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.github{
+    border: 0;
+    border-radius: 25px;
+    padding: 15px;
+    height: 50px;
+    width: 400px;
+    background-color: white;
+}
+
+.npm{
+    border: 0;
+    border-radius: 25px;
+    padding: 15px;
+    height: 50px;
+    width: 400px;
+    background-color: white;
+}
