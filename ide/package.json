@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/Andy-Python-Programmer/p5-studio#readme",
   "dependencies": {
-    "custom-electron-titlebar": "^3.2.2-hotfix62",
     "electron": "^9.0.5",
-    "monaco-loader": "^0.17.0"
+    "monaco-editor": "^0.20.0",
+    "monaco-loader": "^1.0.0"
   }
 }
