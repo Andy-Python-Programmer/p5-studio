@@ -37,23 +37,27 @@ function draw() {
         background-color: black;
     }
     `
+
+    await fs.mkdirSync(name);
+
+    await console.log("\nCreated Directory: " + name)
     
-    await fs.appendFile(`${path_}/index.html`, baseConfig, function (err) {
+    await fs.appendFile(`${path_ + "/" + name}/index.html`, baseConfig, function (err) {
         if (err) throw err;
         console.log('\nCreated index.html');
     });
 
-    await fs.appendFile(`${path_}/sketch.js`, sketchjs, function (err) {
+    await fs.appendFile(`${path_ + "/" + name}/sketch.js`, sketchjs, function (err) {
         if (err) throw err;
         console.log('Created sketch.js');
     });
 
-    await fs.appendFile(`${path_}/style.css`, stylecss, function (err) {
+    await fs.appendFile(`${path_ + "/" + name}/style.css`, stylecss, function (err) {
         if (err) throw err;
         console.log('Created style.css');
     })
         
-    wait(1*1000).then(() => server(path_));  
+    wait(1*1000).then(() => server(path_ + "/" + name));  
 
     return {
         baseConfig
