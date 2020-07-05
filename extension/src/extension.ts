@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// register the command with vscode.
 	// so that we can run it from command pallete.
 	// this command is also defined in package.json
-	let disposable = vscode.commands.registerCommand("p5-complete.openSketch", async () => {
+	let disposable = vscode.commands.registerCommand("p5-studio.openSketch", async () => {
 
 		// create a new webview
 		// this is used to show the sketch
