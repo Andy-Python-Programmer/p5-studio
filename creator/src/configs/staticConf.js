@@ -1,5 +1,6 @@
 const fs = require("fs");
 const server = require("../server/server.js");
+const chalk = require('chalk');
 
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms)); 
 
@@ -38,23 +39,26 @@ function draw() {
     }
     `
 
-    await fs.mkdirSync(name);
+    fs.mkdirSync(name);
 
-    await console.log("\nCreated Directory: " + name)
+    console.log(chalk.white.bgCyan("\nInfo:") + chalk.greenBright(" Created Directory: " + name))
     
-    await fs.appendFile(`${path_ + "/" + name}/index.html`, baseConfig, function (err) {
-        if (err) throw err;
-        console.log('\nCreated index.html');
+    fs.appendFile(`${path_ + "/" + name}/index.html`, baseConfig, function (err) {
+        if (err)
+            throw err;
+        console.log(chalk.white.bgCyan("\nInfo:") + chalk.greenBright(' Created index.html'));
     });
 
-    await fs.appendFile(`${path_ + "/" + name}/sketch.js`, sketchjs, function (err) {
-        if (err) throw err;
-        console.log('Created sketch.js');
+    fs.appendFile(`${path_ + "/" + name}/sketch.js`, sketchjs, function (err) {
+        if (err)
+            throw err;
+        console.log(chalk.white.bgCyan("Info:") + chalk.greenBright(' Created sketch.js'));
     });
 
-    await fs.appendFile(`${path_ + "/" + name}/style.css`, stylecss, function (err) {
-        if (err) throw err;
-        console.log('Created style.css');
+    fs.appendFile(`${path_ + "/" + name}/style.css`, stylecss, function (err) {
+        if (err)
+            throw err;
+        console.log(chalk.white.bgCyan("Info:") + chalk.greenBright(' Created style.css'));
     })
         
     wait(1*1000).then(() => server(path_ + "/" + name));  
