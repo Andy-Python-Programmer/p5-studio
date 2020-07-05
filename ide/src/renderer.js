@@ -5,7 +5,7 @@ const FileManager = require("./filemanager.js")
 loader().then((monaco) => {
   const editor = monaco.editor.create(document.getElementById('container'), {
     language: 'javascript',
-    theme: 'vs-dark',
+    theme: 'vs-code',
     automaticLayout: true,
   });
 
