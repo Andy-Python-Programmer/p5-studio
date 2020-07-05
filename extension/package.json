@@ -10,13 +10,13 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:p5-complete.addComp"
+		"onCommand:p5-complete.openSketch"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "p5-complete.addComp",
+				"command": "p5-complete.openSketch",
 				"title": "Open this sketch"
 			}
 		]
