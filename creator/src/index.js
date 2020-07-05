@@ -42,35 +42,12 @@ async function config() {
 }
 
 async function main() {
-    const existindex = fs.existsSync("index.html");
 
     // Clean Screen
     readline.cursorTo(process.stdout, 0, 0);
     readline.clearScreenDown(process.stdout);
 
-    if (!existindex) {
-        // simply create new project
-        await config();
-        return;
-    }
-
-    // Ask to overtime the file
-    const answers = await inquirer
-        .prompt([
-            {
-                type: "confirm",
-                name: "overwrite",
-                message: "index.html already exists! Would you like to open live server here ?",
-                default: false,
-            }
-        ]);
-
-    if (!answers.overwrite) {
-        console.log("Goodbye :)");
-        return;
-    }
-
-    server(process.cwd());
+    await config();
 }
 
 main();
