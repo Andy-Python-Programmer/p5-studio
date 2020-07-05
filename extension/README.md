@@ -1,6 +1,6 @@
-# p5-complete README
+# p5-studio README
 
-This is the README for your extension "p5-complete". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "p5-studio". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

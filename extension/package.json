@@ -1,6 +1,6 @@
 {
-	"name": "p5-complete",
-	"displayName": "p5-complete",
+	"name": "p5-studio",
+	"displayName": "p5-studio",
 	"description": "Add autocompeletions for p5.js",
 	"version": "0.0.1",
 	"engines": {
@@ -10,13 +10,13 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:p5-complete.openSketch"
+		"onCommand:p5-studio.openSketch"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "p5-complete.openSketch",
+				"command": "p5-studio.openSketch",
 				"title": "Open this sketch"
 			}
 		]
