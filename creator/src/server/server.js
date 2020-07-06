@@ -2,9 +2,8 @@ const express = require("express");
 const open = require('open');
 const chalk = require('chalk');
 
-const port = 3000;
 
-function run_server(path_dir) {
+function run_server(path_dir, port = 3000) {
     const app = express();
     const server = app.listen(port);
 
