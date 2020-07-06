@@ -19,6 +19,7 @@ async function newProject(name, templateName = "static") {
     }
     await fs.promises.mkdir(name);
 
+    // if templateName is not "static" just return
     switch (templateName) {
         case "static":
             break;
@@ -27,11 +28,14 @@ async function newProject(name, templateName = "static") {
             return;
     }
 
+    // SAFETY: since templateName is already checked above
+    // this will always be a valid.
     const template = require("./templates/" + templateName);
     const writeTemplate = require("./writer");
 
     const chalk = require("chalk");
     writeTemplate(name, template(name), (fileName) => {
+        // after each file get written
         console.log(
             chalk.white.bgCyan("Info:") +
                 chalk.greenBright(` Created ${fileName}`)
