@@ -7,7 +7,6 @@ async function newProject(name, templateName = "static") {
     }
     const fs = require("fs");
 
-    console.log(name)
     if (fs.existsSync(name)) {
         console.log("Directory Already exists");
         return;
