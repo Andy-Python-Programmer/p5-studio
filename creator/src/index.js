@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+/**
+ * Create a new project
+ * 
+ * @param {string} name the name of the project
+ * @param {string} [templateName] the name of the template
+ */
 async function newProject(name, templateName = "static") {
     if (name == undefined) {
         console.log("name is required");
@@ -18,6 +24,7 @@ async function newProject(name, templateName = "static") {
             break;
         default:
             console.log("Invalid template");
+            return;
     }
 
     const template = require("./templates/" + templateName);
