@@ -2,7 +2,7 @@
 
 /**
  * Create a new project
- * 
+ *
  * @param {string} name the name of the project
  * @param {string} [templateName] the name of the template
  */
@@ -59,3 +59,6 @@ function main() {
 }
 
 main();
+module.exports = {
+    templateWriter: require("./writer"),
+};
