@@ -25,6 +25,10 @@
     "chalk": "^4.1.0",
     "express": "^4.17.1",
     "inquirer": "^7.3.0",
-    "open": "^7.0.4"
+    "open": "^7.0.4",
+    "yargs": "15.4.0"
+  },
+  "devDependencies": {
+    "@types/yargs": "^15.0.5"
   }
 }

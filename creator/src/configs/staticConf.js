@@ -46,19 +46,19 @@ function draw() {
 
         console.log(chalk.white.bgCyan("\nInfo:") + chalk.greenBright(" Created Directory: " + name))
         
-        fs.appendFile(`${path_ + "/" + name}/index.html`, baseConfig, function (err) {
+        fs.writeFile(`${path_ + "/" + name}/index.html`, baseConfig, function (err) {
             if (err)
                 throw err;
             console.log(chalk.white.bgCyan("\nInfo:") + chalk.greenBright(' Created index.html'));
         });
     
-        fs.appendFile(`${path_ + "/" + name}/sketch.js`, sketchjs, function (err) {
+        fs.writeFile(`${path_ + "/" + name}/sketch.js`, sketchjs, function (err) {
             if (err)
                 throw err;
             console.log(chalk.white.bgCyan("Info:") + chalk.greenBright(' Created sketch.js'));
         });
     
-        fs.appendFile(`${path_ + "/" + name}/style.css`, stylecss, function (err) {
+        fs.writeFile(`${path_ + "/" + name}/style.css`, stylecss, function (err) {
             if (err)
                 throw err;
             console.log(chalk.white.bgCyan("Info:") + chalk.greenBright(' Created style.css'));
