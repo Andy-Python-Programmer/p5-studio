@@ -6,6 +6,7 @@
  * @param {string} name the name of the project
  * @param {string} [templateName] the name of the template
  */
+
 async function newProject(name, templateName = "static") {
     if (name == undefined) {
         console.log("name is required");

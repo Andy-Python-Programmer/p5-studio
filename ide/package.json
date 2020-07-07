@@ -1,18 +1,18 @@
 {
-  "name": "p5-studio-creator",
-  "version": "0.1.0",
-  "description": "A CLI tool to create p5.js project.",
-  "main": "src/index.js",
-  "bin": {
-    "p5-studio": "src/index.js"
+  "name": "p5-studio-ide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Andy-Python-Programmer/p5-studio.git"
   },
   "keywords": [
-    "p5.js",
-    "cli",
+    "p5",
+    "ide",
     "tool"
   ],
   "author": "Anhad Singh",
@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/Andy-Python-Programmer/p5-studio#readme",
   "dependencies": {
-    "chalk": "^4.1.0",
-    "express": "^4.17.1",
-    "open": "^7.0.4"
+    "electron": "^9.0.5",
+    "monaco-editor": "^0.20.0",
+    "monaco-loader": "^1.0.0"
   }
 }

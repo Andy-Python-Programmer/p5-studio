@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.quit{
+    background-color: #FF605C;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    margin-right: 7px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container{
+    background-color: #1e1e1e;
+}
+.max{
+    background-color: #FFBD44;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    margin-right: 7px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.min{
+    background-color: #00CA4E;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    margin-right: 7px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.window-controls{
+    display: flex;
+    background-color: #1e1e1e;
+    padding: 13px;
+    position: absolute;
+    z-index: 1700;
+}
+.text{
+    align-self: center;
+    margin-left: 1px;
+    margin-top: -2px;
+}
+@font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+      src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+        url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+        url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 23px;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'liga';
+}
+.small{
+    font-size: 10px !important;
+}
+
+#container{
+    margin-top: 39px;
+    width: 100%;
+    height: 100vh;
+}
+
+.monaco-editor{
+    color: white;
+    width: 100%;
+    height: 100%;
+}

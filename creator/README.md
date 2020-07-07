@@ -1,7 +1,11 @@
 # P5 Studio Creator
 
+P5 Studio Creator is the part of P5 Studio repository which contains the fastest tools that help you get started with p5.js sketches easily.
+
 ## Setup
 1. Install P5 Studio Creator: `npm i p5-studio-creator -g`
-2. Go to the folder in which you want to create a p5.js sketch.
-3. Run `p5-studio-creator`
-4. Answer the questions and it will create a p5.js project for you :)
+2. Run `p5-studio-creator new <PROJECTNAME>`
+3. Type `cd <PROJECTNAME>`
+4. Run `p5-studio-creator serve`
+
+It will create the project and open a liveserver in the default browser for you :)
