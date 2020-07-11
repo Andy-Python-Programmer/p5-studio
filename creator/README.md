@@ -8,4 +8,9 @@ P5 Studio Creator is the part of P5 Studio repository which contains the fastest
 3. Type `cd <PROJECTNAME>`
 4. Run `p5-studio-creator serve`
 
+### Features
+
+1. Creates Project for you.
+2. Opens Live Server for you.
+
 It will create the project and open a liveserver in the default browser for you :)
