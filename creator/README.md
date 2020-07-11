@@ -8,6 +8,13 @@ P5 Studio Creator is the part of P5 Studio repository which contains the fastest
 3. Type `cd <PROJECTNAME>`
 4. Run `p5-studio-creator serve`
 
+Or
+
+1. Install P5 Studio Creator: `npm i p5-studio-creator -g`
+2. Run `p5-studio new <PROJECTNAME>`
+3. Type `cd <PROJECTNAME>`
+4. Run `p5-studio serve`
+
 ### Features
 
 1. Creates Project for you.

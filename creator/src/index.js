@@ -9,7 +9,7 @@
 
 async function newProject(name, templateName = "static") {
     if (name == undefined) {
-        console.log("name is required");
+        console.log("Name is required");
         return;
     }
     const fs = require("fs");
@@ -31,10 +31,14 @@ async function newProject(name, templateName = "static") {
 
     // SAFETY: since templateName is already checked above
     // this will always be a valid.
+
     const template = require("./templates/" + templateName);
     const writeTemplate = require("./writer");
 
+    const autoCompleter = require("./autocomplete.js")
+
     const chalk = require("chalk");
+
     writeTemplate(name, template(name), (fileName) => {
         // after each file get written
         console.log(
@@ -42,6 +46,8 @@ async function newProject(name, templateName = "static") {
                 chalk.greenBright(` Created ${fileName}`)
         );
     });
+
+    autoCompleter(name, `${process.cwd()}`)
 }
 
 function main() {
