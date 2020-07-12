@@ -15,13 +15,15 @@ async function write(name, path_) {
         fs.writeFile(`${path_ + "/" + name}/index.d.ts`, index, function (err) {
             if (err)
                 throw err;
-            console.log(chalk.white.bgCyan("Info:") + chalk.greenBright(' Created index.d.ts'));
+            console.log(chalk.white.bgCyan("\nAutocomplete:") + chalk.grey(' Created index.d.ts'));
         });
     
-        fs.writeFile(`${path_ + "/" + name}/jsconfig.json`, jsonconf, function (err) {
+        fs.promises.writeFile(`${path_ + "/" + name}/jsconfig.json`, jsonconf, function (err) {
             if (err)
                 throw err;
-            console.log(chalk.white.bgCyan("Info:") + chalk.greenBright(' Created jsconfig.json'));
+        }).then(() => {
+            console.log(chalk.white.bgCyan("Autocomplete:") + chalk.grey(' Created jsconfig.json'));
+            console.log(`\nWe suggest that you begin by typing:\n\tcd ${name}\n\tp5-studio serve`);
         });
     }
     catch (e) {

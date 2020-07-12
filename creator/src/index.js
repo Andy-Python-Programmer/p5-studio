@@ -7,6 +7,8 @@
  * @param {string} [templateName] the name of the template
  */
 
+const yargs = require("yargs");
+
 async function newProject(name, templateName = "static") {
     if (name == undefined) {
         console.log("Name is required");
@@ -39,30 +41,46 @@ async function newProject(name, templateName = "static") {
 
     const chalk = require("chalk");
 
-    writeTemplate(name, template(name), (fileName) => {
+    await writeTemplate(name, template(name), (fileName) => {
         // after each file get written
         console.log(
             chalk.white.bgCyan("Info:") +
-                chalk.greenBright(` Created ${fileName}`)
+                chalk.grey(` Created ${fileName}`)
         );
     });
 
-    autoCompleter(name, `${process.cwd()}`)
+    autoCompleter(name, `${process.cwd()}`);
 }
 
 function main() {
-    let args = process.argv;
-    switch (args[2]) {
-        case "new":
-            newProject(args[3]);
-            break;
-        case "serve":
+    // let args = process.argv;
+
+    const argv = yargs
+    .command(
+        "new <name>",
+        "Create a new project",
+        (yargs) => {
+            yargs.positional("name", {
+                describe: "The name of the project",
+                demandOption: true,
+            })
+        },
+        (argv) => {
+            newProject(argv.name)
+            // console.log(argv.name);
+        }
+    )
+    .command(
+        "serve",
+        "Open liveserver in the current directory :)", () => {
             const server = require("./server/server");
             server(".");
-            break;
-        default:
-            console.log("Command not found");
-    }
+        }
+    )
+    .help()
+    .alias("help", "h")
+    .scriptName("p5-studio")
+    .argv;
 }
 
 main();
