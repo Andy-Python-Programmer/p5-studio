@@ -15,6 +15,10 @@ Or
 3. Type `cd <PROJECTNAME>`
 4. Run `p5-studio serve`
 
+If you want help about any command use:
+1. If specific command then: `p5-studio <COMMANDNAME> -h`
+2. About all commands then: `p5-studio --help`
+
 ### Features
 
 1. Creates Project for you.
