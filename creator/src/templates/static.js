@@ -32,5 +32,22 @@ function draw() {
     box-sizing: border-box;
     background-color: black;
 }
+`,
+    // =============== jsconfig.json ==============
+    "jsconfig.json": 
+`{
+    "compilerOptions": {
+        "target": "es6",
+        "lib": [
+            "es2015",
+            "es2020"
+        ],
+        "esModuleInterop": true
+    },
+    "include": [
+        "./index.d.ts",
+        "*.js"
+    ]
+}
 `
 })
