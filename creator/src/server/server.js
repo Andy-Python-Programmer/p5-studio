@@ -7,7 +7,7 @@ function run_server(path_dir, port = 3000) {
     const app = express();
     
     app.use(express.static(path_dir));
-    app.use(express.static(path.join(__dirname, "..", "static")));
+    app.use(express.static(path.join(__dirname, "static")));
     
     app.listen(port, () => {
         console.log(
