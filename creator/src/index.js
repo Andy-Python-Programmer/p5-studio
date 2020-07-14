@@ -37,50 +37,48 @@ async function newProject(name, templateName = "static") {
     const template = require("./templates/" + templateName);
     const writeTemplate = require("./writer");
 
-    const autoCompleter = require("./autocomplete.js")
+    const autoComplete = require("./templates/autocomplete.js");
 
     const chalk = require("chalk");
 
-    await writeTemplate(name, template(name), (fileName) => {
-        // after each file get written
-        console.log(
-            chalk.white.bgCyan("Info:") +
-                chalk.grey(` Created ${fileName}`)
-        );
-    });
-
-    autoCompleter(name, `${process.cwd()}`);
+    await writeTemplate(
+        name,
+        // merge the two templates
+        { ...autoComplete, ...template(name) },
+        (fileName) => {
+            // after each file get written
+            console.log(
+                chalk.white.bgCyan("Info:") + chalk.grey(` Created ${fileName}`)
+            );
+        }
+    );
 }
 
 function main() {
     // let args = process.argv;
 
     const argv = yargs
-    .command(
-        "new <name>",
-        "Create a new project",
-        (yargs) => {
-            yargs.positional("name", {
-                describe: "The name of the project",
-                demandOption: true,
-            })
-        },
-        (argv) => {
-            newProject(argv.name)
-            // console.log(argv.name);
-        }
-    )
-    .command(
-        "serve",
-        "Open liveserver in the current directory :)", () => {
+        .command(
+            "new <name>",
+            "Create a new project",
+            (yargs) => {
+                yargs.positional("name", {
+                    describe: "The name of the project",
+                    demandOption: true,
+                });
+            },
+            (argv) => {
+                newProject(argv.name);
+                // console.log(argv.name);
+            }
+        )
+        .command("serve", "Open liveserver in the current directory :)", () => {
             const server = require("./server/server");
             server(".");
-        }
-    )
-    .help()
-    .alias("help", "h")
-    .scriptName("p5-studio")
-    .argv;
+        })
+        .help()
+        .alias("help", "h")
+        .scriptName("p5-studio").argv;
 }
 
 main();
