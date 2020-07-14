@@ -1,10 +1,11 @@
 {
   "name": "p5-studio-creator",
-  "version": "1.0.7",
+  "version": "0.1.2",
   "description": "A CLI tool to create p5.js project.",
   "main": "src/index.js",
   "bin": {
-    "p5-studio": "src/index.js"
+    "p5-studio": "src/index.js",
+    "p5-studio-creator": "src/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "express": "^4.17.1",
-    "open": "^7.0.4"
+    "open": "^7.0.4",
+    "yargs": "^15.4.1"
   }
 }
