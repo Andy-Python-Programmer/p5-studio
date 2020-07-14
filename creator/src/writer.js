@@ -29,16 +29,15 @@ async function writeTemplate(basePath, template, afterFileWritten) {
                 promise = fs.promises.writeFile(name, obj.content);
                 break;
             case FILE:
-                promise = fs.promises.copyFile(name, obj.path);
+                promise = fs.promises.copyFile(obj.path, name);
                 break;
             case DIR:
-                const dirPath = path.join(basePath, name);
-                await fs.promises.mkdir(dirPath);
+                await fs.promises.mkdir(name);
 
                 // delete type so that it doesn't create a file "type"
                 delete obj.type;
 
-                promise = writeTemplate(dirPath, obj);
+                promise = writeTemplate(name, obj, afterFileWritten);
                 break;
             default:
                 throw "Invalid Type Found";
