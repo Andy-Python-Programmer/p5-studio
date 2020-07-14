@@ -1,6 +1,10 @@
-module.exports = name => ({
+const { TEXT } = require("../writer");
+
+module.exports = (name) => ({
     // =============== index.html ==============
-    "index.html": `<!DOCTYPE html>
+    "index.html": {
+        type: TEXT,
+        content: `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,9 +19,12 @@ module.exports = name => ({
 </body>
 </html>
 `,
+    },
 
     // =============== sketch.js ==============
-    "sketch.js": `function setup() {
+    "sketch.js": {
+        type: TEXT,
+        content: `function setup() {
     createCanvas(400, 400);
 };
 
@@ -25,12 +32,16 @@ function draw() {
     background(0);
 };
 `,
+    },
     // =============== style.css ==============
-    "style.css": `body{
+    "style.css": {
+        type: TEXT,
+        content: `body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     background-color: black;
 }
-`
-})
+`,
+    },
+});

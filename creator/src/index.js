@@ -35,7 +35,7 @@ async function newProject(name, templateName = "static") {
     // this will always be a valid.
 
     const template = require("./templates/" + templateName);
-    const writeTemplate = require("./writer");
+    const { writeTemplate } = require("./writer");
 
     const autoComplete = require("./templates/autocomplete.js");
 
@@ -83,5 +83,5 @@ function main() {
 
 main();
 module.exports = {
-    templateWriter: require("./writer"),
+    templateWriter: require("./writer").writeTemplate,
 };

@@ -1,6 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
+const TEXT = 0;
+const FILE = 1;
+const DIR = 2;
+
 /**
  * @param {string} basePath
  * the base path to write project to
@@ -14,16 +18,42 @@ const path = require("path");
  */
 async function writeTemplate(basePath, template, afterFileWritten) {
     const promises = [];
+    for (const key in template) {
+        const obj = template[key];
+        const name = path.join(basePath, key);
 
-    for (const fileName in template) {
-        const promise = fs.promises
-            .writeFile(path.join(basePath, fileName), template[fileName])
-            .then(() => afterFileWritten(fileName));
+        let promise;
 
+        switch (obj.type) {
+            case TEXT:
+                promise = fs.promises.writeFile(name, obj.content);
+                break;
+            case FILE:
+                promise = fs.promises.copyFile(name, obj.path);
+                break;
+            case DIR:
+                const dirPath = path.join(basePath, name);
+                await fs.promises.mkdir(dirPath);
+
+                // delete type so that it doesn't create a file "type"
+                delete obj.type;
+
+                promise = writeTemplate(dirPath, obj);
+                break;
+            default:
+                throw "Invalid Type Found";
+        }
+
+        promise.then(() => afterFileWritten(key));
         promises.push(promise);
     }
 
     await Promise.all(promises);
 }
 
-module.exports = writeTemplate;
+module.exports = {
+    TEXT,
+    FILE,
+    DIR,
+    writeTemplate,
+};
