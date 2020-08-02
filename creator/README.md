@@ -1,27 +1,26 @@
 # P5 Studio Creator
 
-P5 Studio Creator is the part of P5 Studio repository which contains the fastest tools that help you get started with p5.js sketches easily.
+[P5 Studio Creator](https://github.com/Andy-Python-Programmer/p5-studio/tree/master/creator) is the part of [P5 Studio](https://github.com/Andy-Python-Programmer/p5-studio) repository which contains the fastest tools that help you get started with [p5.js](https://p5js.org/) sketches easily.
 
-## Setup
-1. Install P5 Studio Creator: `npm i p5-studio-creator -g`
-2. Run `p5-studio-creator new <PROJECTNAME>`
-3. Type `cd <PROJECTNAME>`
-4. Run `p5-studio-creator serve`
+## Documentation:
 
-Or
+### 1. How to install:
+1. Install node.js
+2. Install P5 Studio Creator: `npm i p5-studio-creator -g`
 
-1. Install P5 Studio Creator: `npm i p5-studio-creator -g`
-2. Run `p5-studio new <PROJECTNAME>`
-3. Type `cd <PROJECTNAME>`
-4. Run `p5-studio serve`
+### 2. Create new project:
+1. Run `studio new <PROJECTNAME>`
 
-If you want help about any command use:
-1. If specific command then: `p5-studio <COMMANDNAME> -h`
-2. About all commands then: `p5-studio --help`
+### 3. Run the project:
+1. Type `cd <PROJECTNAME>`
+2. Run `studio serve`
 
-### Features
+### If you want help about any command use:
+1. If specific command then: `studio <COMMANDNAME> -h`
+2. About all commands then: `studio --help`
 
-1. Creates Project for you.
-2. Opens Live Server for you.
+## Features:
 
-It will create the project and open a liveserver in the default browser for you :)
+1. Creates p5.js project for you.
+2. Opens live server for you.
+3. Has javascript console inbuilt to the terminal or command prompt
