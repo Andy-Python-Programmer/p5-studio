@@ -5,6 +5,7 @@ const socket = require("socket.io");
 
 function run_server(path_dir, port = 3000) {
     const app = express();
+    console.log("\n")
     
     app.use(express.static(path_dir));
 
@@ -19,9 +20,8 @@ function run_server(path_dir, port = 3000) {
     var io = socket(server)
 
     io.on("connection", function(socket){
-        console.log("New Console:")
         socket.on("console", function(data){
-            console.log(data)
+            console.log(chalk.redBright(data["console"]))
         })
     })
 }
