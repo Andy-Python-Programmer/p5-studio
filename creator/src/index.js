@@ -40,6 +40,7 @@ async function newProject(name, templateName = "static") {
     const autoComplete = require("./templates/autocomplete.js");
 
     const chalk = require("chalk");
+    const inject = require("../injection/injection.js")
 
     await writeTemplate(
         name,
@@ -52,6 +53,8 @@ async function newProject(name, templateName = "static") {
             );
         }
     );
+
+    await inject(name, `${process.cwd()}`)
 }
 
 function main() {

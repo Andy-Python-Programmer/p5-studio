@@ -11,6 +11,12 @@ module.exports = (name) => ({
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="libs/p5.js"></script>
     <script src="libs/p5.sound.min.js"></script>
+
+    <!-- These files are required for inbuilt console -->
+
+    <script src="./libs/console/console.util.js"></script>
+    <script src="./libs/console/console.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>${name}</title>
 </head>
