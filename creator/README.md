@@ -23,4 +23,4 @@
 
 1. Creates p5.js project for you.
 2. Opens live server for you.
-3. Has javascript console inbuilt to the terminal or command prompt
+3. Has javascript console inbuilt to the terminal or command prompt.

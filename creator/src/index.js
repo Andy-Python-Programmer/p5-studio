@@ -81,7 +81,7 @@ function main() {
         })
         .help()
         .alias("help", "h")
-        .scriptName("p5-studio").argv;
+        .scriptName("studio").argv;
 }
 
 main();
