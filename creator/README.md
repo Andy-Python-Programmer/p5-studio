@@ -12,12 +12,12 @@
 1. Run `studio new <PROJECTNAME>`
 
 ### 3. Run the project:
-1. Type `cd <PROJECTNAME>`
+1. Run `cd <PROJECTNAME>`
 2. Run `studio serve`
 
 ### If you want help about any command:
-1. If specific command then type: `studio <COMMANDNAME> -h`
-2. About all commands then type: `studio --help`
+1. If specific command then run: `studio <COMMANDNAME> -h`
+2. About all commands then run: `studio --help`
 
 ## Features:
 
