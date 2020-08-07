@@ -1,5 +1,8 @@
 # P5 Studio Creator
 
+![npm](https://img.shields.io/npm/dt/p5-studio-creator)
+![npm](https://img.shields.io/npm/v/p5-studio-creator?color=light-green)
+
 [P5 Studio Creator](https://github.com/Andy-Python-Programmer/p5-studio/tree/master/creator) is the part of [P5 Studio](https://github.com/Andy-Python-Programmer/p5-studio) repository which contains the fastest tools that help you get started with [p5.js](https://p5js.org/) sketches easily.
 
 ## Documentation:
