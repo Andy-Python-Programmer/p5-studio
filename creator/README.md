@@ -15,9 +15,9 @@
 1. Type `cd <PROJECTNAME>`
 2. Run `studio serve`
 
-### If you want help about any command use:
-1. If specific command then: `studio <COMMANDNAME> -h`
-2. About all commands then: `studio --help`
+### If you want help about any command:
+1. If specific command then type: `studio <COMMANDNAME> -h`
+2. About all commands then type: `studio --help`
 
 ## Features:
 
