@@ -20,8 +20,8 @@
 2. Run `studio serve`
 
 ### If you want help about any command:
-1. If specific command then run: `studio <COMMANDNAME> -h`
-2. About all commands then run: `studio --help`
+1. If you want to know more about specific command then run: `studio <COMMANDNAME> -h`
+2. If you want to get all the list of commands with their options and description then run: `studio --help`
 
 ## Features:
 
