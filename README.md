@@ -1,4 +1,4 @@
-<a href="https://andy-python-programmer.github.io/p5-studio/"><p align="center"><img src="github/logo.PNG" height="200px"/></p></a>
+<a href="https://andy-python-programmer.github.io/p5-studio/"><p align="center"><img src="github/logo-white.png" height="250px"/></p></a>
 
 <a href="https://andy-python-programmer.github.io/p5-studio/"><p>P5 Studio Docs</p></a>
 
